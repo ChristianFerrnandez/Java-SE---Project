@@ -1,0 +1,31 @@
+{
+  "flows": [{
+      "comment": "Debit to account 1",
+      "identifier": 1,
+      "amount": 50.00,
+      "accountNumber": 1,
+      "localDate": "2023-02-05"
+    },
+    {
+      "comment": "Credit to Current Accounts",
+      "identifier": 2,
+      "amount": 100.50,
+      "accountNumber": 1,
+      "localDate": "2023-02-05"
+    },
+    {
+      "comment": "Credit to Saving Accounts 1",
+      "identifier": 3,
+      "amount": 1500,
+      "accountNumber": 1,
+      "localDate": "2023-02-05"
+    },
+    {
+      "comment": "Debit to account 1",
+      "identifier": 4,
+      "amount": 50.00,
+      "accountNumber": 1,
+      "localDate": "2023-02-05"
+    }
+  ]
+}

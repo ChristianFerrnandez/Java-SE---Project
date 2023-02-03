@@ -1,16 +1,24 @@
 package org.example;
 
-// 1.1.1 Creation of the client class
+import java.util.concurrent.atomic.AtomicInteger;
+
+/**
+ * 1.1.1 Creation of CLient class
+ */
 public class Client {
+    /**
+     * AtomicInteger provides an int value to be updated automatically
+     */
+    private final static AtomicInteger count = new AtomicInteger();
 
     private String name;
-    private String  firstname;
-    private static int clientNumber = 0;
+    private String firstname;
+    private int clientNumber;
 
     public Client(String name, String firstname) {
         this.name = name;
         this.firstname = firstname;
-        clientNumber++;
+        this.clientNumber = count.incrementAndGet();
     }
 
     public String getName() {
@@ -29,19 +37,16 @@ public class Client {
         this.firstname = firstname;
     }
 
-    public static int getClientNumber() {
+    public int getClientNumber() {
         return clientNumber;
     }
 
-    public static void setClientNumber(int clientNumber) {
-        Client.clientNumber = clientNumber;
+    public void setClientNumber(int clientNumber) {
+        this.clientNumber = clientNumber;
     }
 
     @Override
     public String toString() {
-        return "Client{" +
-                "name='" + name + '\'' +
-                ", firstname='" + firstname + '\'' +
-                '}';
+        return "Client{" + "name='" + name + '\'' + ", firstname='" + firstname + '\'' + '}';
     }
 }
